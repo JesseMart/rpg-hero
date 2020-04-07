@@ -45,6 +45,7 @@ class Character:
                 enemy.health -= hero.health
             else:
                 print("The Shadow takes no damage!")
+                
         elif (self.character_name == "Goblin" or self.character_name == "Zombie" or self.character_name == "Shadow"):
             print(f"The {self.character_name} does {self.power} damage to you.")
 
@@ -105,6 +106,7 @@ def main(enemy):
         print("3. Flee")
         print("> ", end=' ')
         raw_input = input()
+
         if raw_input == "1":
             # Hero attacks enemy
             hero.attack(enemy)
@@ -112,9 +114,12 @@ def main(enemy):
                 enemy.print_status()
                 print(f"The {enemy.character_name} is dead.")
                 hero.bounty_collect(enemy)
+
         elif raw_input == "2":
             pass
+
         elif raw_input == "3":
+
             print("GOODBYE.")
             break
         else:
